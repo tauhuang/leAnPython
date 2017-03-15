@@ -8,8 +8,8 @@ def main():
         for line in source:
             data = line.split(':')
             user, home, shell = data[0], data[5], data[6].strip
-            target.write("{0},{1},{2}\n".format(user, home, shell)
+            target.write("{0},{1},{2}\n".format(user, home, shell))
             
             
- if __name__ == '__main__':
-     main()
+if __name__ == '__main__':
+    main()
