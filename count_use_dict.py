@@ -32,10 +32,16 @@ def generate_dict_pretty(filename):
 def counts_dict(word_dict):
     counts = word_dict.itervalues()
     largest5 = heapq.nlargest(5, counts)
-    print(largest5)
     for i in word_dict:
         if word_dict[i] in largest5:
             print(i, word_dict[i])
+
+            
+# Another method use sorted in dict            
+# def counts_dict(word_dict):
+#     result = sorted(zip(word_dict.values(), word_dict.keys()), reverse=True)[:9]
+#     for val, key in result:
+#        print(key, ':', val)
 
 
 def main():
