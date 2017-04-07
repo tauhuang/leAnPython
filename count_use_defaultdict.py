@@ -22,6 +22,13 @@ def top5_words(word_dict):
     for i in word_dict:
         if word_dict[i] in largest5:
             print(i, word_dict[i])
+            
+            
+# Another method use sorted in dict            
+# def top5_words(word_dict):
+#     result = sorted(zip(word_dict.values(), word_dict.keys()), reverse=True)[:9]
+#     for val, key in result:
+#        print(key, ':', val)
 
 
 def main():
