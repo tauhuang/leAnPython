@@ -25,6 +25,7 @@ def main():
     package = 'mongodb-linux-x86_64-rhel70-3.4.2.tgz'
     if not os.path.exists(package):
         raise SystemExit("{0} not found".format(package))
+    prepare_env(data_dir, package)
     package_dir = os.path.splitext(package)[0]
     mongod = os.path.join(os.path.realpath('.'), package_dir, 'bin', 'mongod')
     os.system("{0} --dbpath {1} &".format(mongod, data_dir))
